@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Number SMS Verification in Firebase</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="./style.css">
@@ -14,7 +16,7 @@
             <h1>Phone Number Verification with Firebase SMS</h1>
 
             <div class="number-input">
-                <input type="text" id="number" placeholder="+639948621564">
+                <input type="text" id="number" placeholder="Enter the Phone Number">
                 <div id="recaptcha-container"></div>
                 <button id="send" onclick="sendOTP()">Verify Number</button>
             </div>
