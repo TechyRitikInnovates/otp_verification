@@ -1,6 +1,6 @@
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+ const firebaseConfig = {
     apiKey: "AIzaSyD5-WGoxYtOWlMPJgssoLvCS5MRoZitOTQ",
     authDomain: "kavach-1699b.firebaseapp.com",
     projectId: "kavach-1699b",
@@ -21,10 +21,7 @@ function render() {
 // function for send OTP
 function sendOTP() {
     var number = document.getElementById('number').value;
-    number = "+91" + number; // Adjust according to your country code
-
-    firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier)
-    .then(function (confirmationResult) {
+    firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function (confirmationResult) {
         window.confirmationResult = confirmationResult;
         coderesult = confirmationResult;
         document.querySelector('.number-input').style.display = 'none';
@@ -34,7 +31,6 @@ function sendOTP() {
         alert(error.message);
     });
 }
-
 
 // function for OTP verify
 function verifyCode() {
